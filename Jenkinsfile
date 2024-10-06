@@ -26,11 +26,15 @@ pipeline{
                     echo "Test stage"
                     test -f build/index.html
 
-                    if test -f build/index1.html; then
+                    if test -f build/index.html; then
                         echo "File exists."
                     else                        
                         exit 2
                     fi
+
+                    echo "Before running test"
+                    npm test
+                    echo "After running test"
                 '''
             }
         }
