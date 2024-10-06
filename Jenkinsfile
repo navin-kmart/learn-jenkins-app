@@ -26,7 +26,7 @@ pipeline{
                     echo "Test stage"
                     test -f build/index.html
 
-                    if test -f build/index.html then
+                    if test -f build/index.html; then
                         echo "File exists."
                     else
                         echo "File does not exist!"
