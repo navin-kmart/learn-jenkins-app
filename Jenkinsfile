@@ -29,7 +29,7 @@ pipeline{
                     if test -f build/index1.html; then
                         echo "File exists."
                     else                        
-                        error("Build failed because the file does not exist!")
+                        exit 2
                     fi
                 '''
             }
